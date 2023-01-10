@@ -1,0 +1,5 @@
+steps:
+   - name: 'gcr.io/cloud-builders/docker'
+     args: ['build', '-t', 'gcr.io/prismatic-vim-374308/11fc7ca80cd6', '.']
+   - name: 'gcr.io/cloud-builders/docker'
+     args: ['push', 'gcr.io/prismatic-vim-374308/11fc7ca80cd6']
