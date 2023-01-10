@@ -14,16 +14,19 @@ def evaluate(model_checkpoint):
     print(model_checkpoint)
 
     # TODO: Implement evaluation logic here
+
+     # set the device
+    device = torch.device("cpu")
+
     # load the model from last saved checkpoint
     model = MyAwesomeModel()
-    model.load_state_dict(torch.load(model_checkpoint))
+    model.load_state_dict(torch.load(model_checkpoint, map_location=device))
     # model = torch.load(model_checkpoint)
     test_set = MyAwesomeDataset(test=True)
 
     test_loader = torch.utils.data.DataLoader(test_set, batch_size=64, shuffle=True)
     # do inference on the test set
-    # set the device
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+   
     # move the model to the device
     model.to(device)
     # set the model to evaluation mode

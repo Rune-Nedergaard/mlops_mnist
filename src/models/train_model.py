@@ -6,9 +6,6 @@ import click
 from custom_dataset import MyAwesomeDataset
 from model import MyAwesomeModel
 
-import wandb
-
-wandb.init(project = "MNIST", config= {"learning_rate": 1e-3, "batch_size": 50, "epochs": 10, "hidden_dim": 400, "latent_dim": 20})
 
 datafolder='../../data/processed/'
 

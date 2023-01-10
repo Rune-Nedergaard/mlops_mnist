@@ -22,6 +22,6 @@ RUN pip install -r requirements.txt --no-cache-dir
 # the internet and not installed from a locally cached copy.
 
 # Set entrypoint
-ENTRYPOINT ["python", "-u", "src/models/train_model.py"]
+ENTRYPOINT ["python", "-u", "src/models/predict_model.py"]
 # "u" here makes sure that any output from our script e.g. any print(...)
 # statements gets redirected to our terminal. If not included you would need to use docker logs to inspect your run.
