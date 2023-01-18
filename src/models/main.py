@@ -65,7 +65,7 @@ def train(lr):
 
 
 # loading model checkpoint from saved model
-model_checkpoint = torch.load("model.pth")
+model_checkpoint = torch.load("models/model.pth")
 
 
 @click.command()
